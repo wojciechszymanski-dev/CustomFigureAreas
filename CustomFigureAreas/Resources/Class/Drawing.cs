@@ -13,23 +13,20 @@ namespace CustomFigureAreas.Resources.Class
             canvas.StrokeColor = Colors.White;
             canvas.StrokeSize = 5;
 
-            for (int i = 0; i < pointList.Count - 1; i++)
+            for (int i = 0; i < pointList.Count; i++)
             {
                 var startPoint = pointList[i];
-                var endPoint = pointList[i + 1];
+                var endPoint = pointList[(i + 1) % pointList.Count];
+
+                if (startPoint.HasValue)
+                {
+                    canvas.FillCircle((float)startPoint.Value.X, (float)startPoint.Value.Y, 20f);
+                }
 
                 if (startPoint.HasValue && endPoint.HasValue)
                 {
-                    canvas.FillCircle((float)startPoint.Value.X, (float)startPoint.Value.Y, 20f);
-                    canvas.DrawLine((float)startPoint.Value.X, (float)startPoint.Value.Y,(float)endPoint.Value.X, (float)endPoint.Value.Y);
+                    canvas.DrawLine((float)startPoint.Value.X, (float)startPoint.Value.Y, (float)endPoint.Value.X, (float)endPoint.Value.Y);
                 }
-            }
-
-            // Draw the last point
-            if (pointList.Count > 0 && pointList[pointList.Count - 1].HasValue)
-            {
-                canvas.FillCircle((float)pointList[pointList.Count - 1].Value.X,
-                                  (float)pointList[pointList.Count - 1].Value.Y, 20f);
             }
         }
     }
