@@ -131,19 +131,19 @@ namespace CustomFigureAreas
             return false;
         }
 
-        private bool DoLinesIntersect((Point A, Point B) line1, (Point C, Point D) line2)
+        private bool DoLinesIntersect((Point X1, Point Y1) line1, (Point X2, Point Y2) line2)
         {
-            double ccw(Point A, Point B, Point C)
+            double check(Point A, Point B, Point C)
             {
                 return (C.Y - A.Y) * (B.X - A.X) - (C.X - A.X) * (B.Y - A.Y);
             }
 
-            var A = line1.A;
-            var B = line1.B;
-            var C = line2.C;
-            var D = line2.D;
+            var X1 = line1.X1;
+            var Y1 = line1.Y1;
+            var X2 = line2.X2;
+            var Y2 = line2.Y2;
 
-            return (ccw(A, C, D) * ccw(B, C, D) < 0) && (ccw(A, B, C) * ccw(A, B, D) < 0);
+            return (check(X1, X2, Y2) * check(Y1, X2, Y2) < 0) && (check(X1, Y1, X2) * check(X1, Y1, Y2) < 0);
         }
     }
 }

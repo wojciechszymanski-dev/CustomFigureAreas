@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\wojci\source\repos\CustomFigureAreas\CustomFigureAreas\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-06-02T10:59:01.260</Modified>
+      <Modified>2024-06-02T11:06:24.644</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojci\source\repos\CustomFigureAreas\CustomFigureAreas\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CustomFigureAreas.dll">
       <PackagePath>CustomFigureAreas.dll</PackagePath>
-      <Modified>2024-06-02T10:59:00.642</Modified>
+      <Modified>2024-06-02T11:06:24.026</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojci\source\repos\CustomFigureAreas\CustomFigureAreas\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>CustomFigureAreas.exe</PackagePath>
-      <Modified>2024-06-02T10:59:00.642</Modified>
+      <Modified>2024-06-02T11:06:24.033</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojci\source\repos\CustomFigureAreas\CustomFigureAreas\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CustomFigureAreas.deps.json">
       <PackagePath>CustomFigureAreas.deps.json</PackagePath>
