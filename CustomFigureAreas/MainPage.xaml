@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomFigureAreas.MainPage">
+
+    <Grid x:Name="outerGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Grid.Row="1" Grid.Column="1" >
+            <GraphicsView x:Name="Canvas" 
+              HorizontalOptions="Fill"
+              MinimumHeightRequest="800" 
+              MinimumWidthRequest="800">
+                <GraphicsView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CanvasTapped" NumberOfTapsRequired="1" />
+                </GraphicsView.GestureRecognizers>
+            </GraphicsView>
+
+            <Label x:Name="area" 
+                   Text="0.00"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="End"/>
+        </VerticalStackLayout>
+        
+        
+
+    </Grid>
+
+</ContentPage>
